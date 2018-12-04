@@ -1,0 +1,38 @@
+{
+  "name": "twitter-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rm -rf out",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "start": "node out/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ChristianNHenriksen/Twitter-Scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/ChristianNHenriksen/Twitter-Scraper",
+  "dependencies": {
+    "@types/sanitize-filename": "^1.1.28",
+    "cheerio": "^1.0.0-rc.2",
+    "get-image-urls": "^1.0.5",
+    "moment": "^2.22.1",
+    "sanitize-filename": "^1.6.1",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/cheerio": "^0.22.9",
+    "@types/mocha": "^5.0.0",
+    "@types/superagent": "^3.5.7",
+    "@types/twit": "^2.2.19",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "superagent": "^3.8.2",
+    "typescript": "^2.8.1"
+  }
+}
