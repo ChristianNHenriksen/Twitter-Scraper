@@ -8,11 +8,11 @@ var sanitize = require('sanitize-filename');
 
 const parameters = process.argv.slice(2);
 if (parameters.length !== 3)
-  throw new Error("Expects 3 parameters: 'handlefile', 'customer key' and 'customer secret'");
+  throw new Error("Expects 3 parameters: 'handlefile', 'consumer key' and 'consumer secret'");
 
 const twitterHandlesPath = parameters[0];
-const customerKey = parameters[1];
-const customerSecret = parameters[2];
+const consumerKey = parameters[1];
+const consumerSecret = parameters[2];
 
 var dataDir = "data";
 if (!fs.existsSync(dataDir)) {
@@ -24,8 +24,8 @@ var lineReader = require('readline').createInterface({
 });
 
 const twitter = new twit({
-  consumer_key: customerKey,
-  consumer_secret: customerSecret,
+  consumer_key: consumerKey,
+  consumer_secret: consumerSecret,
   app_only_auth: true
 })
 
